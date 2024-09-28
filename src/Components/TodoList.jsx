@@ -2,13 +2,19 @@
 import TodoCard from "./TodoCard";
 
 const TodoList = (props) => {
-  const { todos } = props;
+  const { todos, handleDeleteTodo } = props;
 
   return (
     <div>
       <ul>
         {todos.map((data, dataIndex) => (
-          <TodoCard key={dataIndex} todos={data}></TodoCard>
+          <TodoCard
+            {...props}
+            key={dataIndex}
+            index={dataIndex}
+            handleDeleteTodo={handleDeleteTodo}
+            todos={data}
+          ></TodoCard>
         ))}
       </ul>
     </div>
