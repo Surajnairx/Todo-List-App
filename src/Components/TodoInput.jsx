@@ -1,10 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 
 const TodoInput = (props) => {
-  const { handleAddTodos } = props;
-
-  const [todoValue, setTodoValue] = useState("");
+  const { handleAddTodos, todoValue, setTodoValue } = props;
 
   return (
     <div className=" flex justify-center my-5 ">
